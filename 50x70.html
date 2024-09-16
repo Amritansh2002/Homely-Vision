@@ -1,0 +1,941 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>homely vision</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+    <link rel="stylesheet" href="style.css">
+
+
+    <style>
+        /* Style for the container that holds the left and right sections */
+        .container {
+            display: flex;
+        }
+
+        /* Style for the left side option box */
+        .left-side {
+            flex: 1;
+            background-color: #E3E6F3;
+            box-shadow: 0 5px 15px rgba(0, 0, 0,0.06);
+            padding: 20px;
+            height: 3164px;
+            border-bottom-right-radius: 23px;
+        }
+
+        .small-input {
+    width: 114px; /* Adjust the width as needed */
+    height: 37px; /* Adjust the height as needed */
+   }
+   .my-button1 {
+    padding: 10px 20px; /* Adjust padding for button size */
+    font-size: 16px; /* Adjust font size */
+    background-color: #3498db; /* Background color */
+    color: #fff; /* Text color */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Show pointer on hover */
+    transition: background-color 0.3s; /* Smooth color transition on hover */
+   }
+
+    /* Optional: Add a hover effect */
+    #button1:hover {
+        background-color:#2980b9;
+        
+        
+    }
+    .my-list {
+    list-style: none;
+    
+    }
+
+
+
+   
+
+
+        /* Style for the right side content */
+        .right-side {
+            flex: 3;
+            
+        }
+    </style>
+</head>
+<body>
+
+<section id="header">
+    <a href="#"><img src="image/logo.png" class="logo" alt=""></a>
+
+    <div>
+        <ul id="navbar">
+            <li><a href="index.html">Home</a></li>
+            <li><a  class="active" href="shop.html">Create</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="cart.html">Saved</a></li>
+            
+            
+
+            
+
+        </ul>
+    </div>
+    <div id="mobile">
+        <i id="bar" class="fas fa-outdent"></i>
+    </div>
+
+
+</section>
+
+
+<div class="container">
+    <div class="left-side">
+        <!-- Your left-side content (option box) goes here -->
+        
+        <h3 class="design">Search By Dimension</h3>
+        <br>
+        
+        <ul>
+            
+                <label for="length"><b>Length:</b></label>
+                <input type="number" id="length" class="small-input"  placeholder="Enter length ">
+                <br><br>
+                <label for="width"><b>Width:</b></label>
+                <input type="number" id="width"  class="small-input" placeholder="Enter width ">
+                <br><br>
+                <button id="button1" class="my-button1" onclick="openHTMLFile()"><b>Search</b></button>
+            </li>
+           
+        </ul>
+        <br><br>
+        <h3 class="design">Search By flore</h3>
+        <br>
+        <ul class="my-list">
+            <li> <label for="filename"><b>Flore No:</b></label>
+                
+                <input type="text" id="fileName" class="small-input"   placeholder="Enter the floor number">
+            
+                <br><br>
+                <button  id="button1"  class="my-button1" onclick="loadHTMLFile()"><b>Search</b></button></li>
+        </ul>
+        <br><br>
+         <h3 class="design">Search By Range </h3>
+         <br>
+        <ul class="my-list">
+            <li>
+                <label for="checkbox1"  ><b>100sqft - 1000sqft:</b></label>
+                <input type="checkbox" id="checkbox1"  class="small-input" data-page="page1" onclick="checkboxClicked(this)"><br><br>
+               
+            
+             
+
+                <label for="checkbox2"><b>1000sqft - 2000sqft:</b></label>
+                <input type="checkbox" id="checkbox2"  class="small-input" data-page="page2" onclick="checkboxClicked(this)"><br><br>
+            
+            
+                <label for="checkbox2"><b>2000sqft - 3000sqft:</b></label>
+                <input type="checkbox" id="checkbox2" class="small-input" data-page="page3" onclick="checkboxClicked(this)"><br><br>
+            
+            
+            
+                <label for="checkbox3"><b>3000sqft - 4000sqft:</b></label>
+                <input type="checkbox" id="checkbox2"  class="small-input" data-page="page4" onclick="checkboxClicked(this)"><br><br>
+            </li>
+        </ul>
+        <br><br>
+        <h3 class="design">Instruction for giving the Inputs</h3>
+        <br>
+        <ul>
+            <li>In the "search by dimension" section input will be like round of numbers from 10 to 100</li>
+            <br>
+            <li>Input like 10X10, 10X20, 10X30 etc.</li>
+            <br>
+            <li>Input with jumbled number will come soon. </li>
+            <br>
+            <li>In the "search by floor" section input will be upto 3 floors</li>
+            <br>
+        </ul>
+        <br>
+        <br>
+        <h3 class="design">Description</h3>
+        <br>
+        <ul>
+            <li>
+                Dedicated to helping individuals and families achieve their dream homes.
+            </li>
+            <br>
+            <li>
+                Combines design expertise with technology and innovation.
+            </li>
+            <br>
+            <li>
+                Tailors home designs to match users' preferences and lifestyle.
+            </li>
+            <br>
+            <li>
+                Offers budget-friendly design options without compromising quality.
+            </li>
+            <br>
+            <li>
+                Utilizes data and machine learning for accurate cost predictions.
+            </li>
+            <br>
+            <li>
+                Empowers users to make informed decisions about location and budget.
+            </li>
+            <br>
+            <li>
+                Provides a user-friendly and intuitive platform for a seamless experience.
+            </li>
+            <br>
+            <li>
+                Promotes sustainability and eco-friendly design options.
+            </li>
+            <br>
+            <li>
+                Collaborative approach, where user input is valued.
+            </li>
+            <br>
+            <li>
+                Customization options for every aspect of home design.
+            </li>
+            <br>
+            <li>
+                A focus on architectural aesthetics and functionality.
+            </li>
+            <br>
+            <li>
+                Considers the latest design trends and styles.
+            </li>
+            <br>
+            <li>
+                Transparent cost breakdowns for better financial planning.
+            </li>
+            <br>
+            <li>
+                Strong commitment to client satisfaction and happiness.
+            </li>
+            <br>
+            <li>
+                User testimonials and success stories highlight the positive impact.
+            </li>
+            <br>
+            <li>
+                Inspires homeowners to create living spaces that reflect their identity.
+            </li>
+            <br>
+            <li>
+                Committed to continuously improving and evolving the platform.
+            </li>
+            <br>
+            <li>
+                A team that values creativity and out-of-the-box thinking.
+            </li>
+            <br>
+            <li>
+                Engages in community-building and user support.
+            </li>
+            <br>
+            <li>
+                Envisions a world where everyone can have a personalized dream home.
+            </li>
+            <br>
+        </ul>
+    </div>
+    <div class="right-side">
+        <!-- Your right-side content goes here -->
+         <!--<h1>Welcome to My Website</h1> 
+        <p>This is the content on the right side of the webpage.</p>-->
+        
+    <section id="product1"  class="section-p1">
+    
+    <div class="pro-container">
+        <div class="pro" onclick="window.location.href='eg1.html';">
+            <img src="50x70/1.jpg" alt="">
+            <div class="des">
+                <span>Homely Vision</span>
+                <h5>50X70 sqft Duplex Exterior Design</h5>
+                <div class="star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <h4>Check Price</h4>
+            </div>
+                <a href="#"><i class=" fal fa-shopping-cart cart"></i></a>
+            </div>
+            <div class="pro" onclick="window.location.href='eg2.html';">
+                <img src="50x70/2.jpg" alt="">
+                <div class="des">
+                    <span>Homely Vision</span>
+                    <h5>50X70 sqft Duplex Exterior Design</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>Check Price</h4>
+                </div>
+                    <a href="#"><i class=" fal fa-shopping-cart cart"></i></a>
+                </div>
+
+                <div class="pro" onclick="window.location.href='eg3.html';">
+                    <img src="50x70/3.jpg" alt="">
+                    <div class="des">
+                        <span>Homely Vision</span>
+                        <h5>50X70 sqft Duplex Exterior Design</h5>
+                        <div class="star">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h4>Check Price</h4>
+                    </div>
+                        <a href="#"><i class=" fal fa-shopping-cart cart"></i></a>
+                    </div>
+
+                    <div class="pro" onclick="window.location.href='eg4.html';">
+                        <img src="50x70/4.jpg" alt="">
+                        <div class="des">
+                            <span>Homely Vision</span>
+                            <h5>50X70 sqft Duplex Exterior Design</h5>
+                            <div class="star">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <h4>Check Price</h4>
+                        </div>
+                            <a href="#"><i class=" fal fa-shopping-cart cart"></i></a>
+                        </div>
+
+                        <div class="pro" onclick="window.location.href='eg5.html';">
+                            <img src="50x70/5.jpg" alt="">
+                            <div class="des">
+                                <span>Homely Vision</span>
+                                <h5>50X70 sqft Duplex Exterior Design</h5>
+                                <div class="star">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <h4>Check Price</h4>
+                            </div>
+                                <a href="#"><i class=" fal fa-shopping-cart cart"></i></a>
+                            </div>
+
+                            <div class="pro" onclick="window.location.href='eg6.html';">
+                                <img src="50x70/6.jpg" alt="">
+                                <div class="des">
+                                    <span>Homely Vision</span>
+                                    <h5>50X70 sqft Duplex Exterior Design</h5>
+                                    <div class="star">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <h4>Check Price</h4>
+                                </div>
+                                    <a href="#"><i class=" fal fa-shopping-cart cart"></i></a>
+                                </div>
+
+                                <div class="pro" onclick="window.location.href='eg7.html';">
+                                    <img src="50x70/7.jpg" alt="">
+                                    <div class="des">
+                                        <span>Homely Vision</span>
+                                        <h5>50X70 sqft Duplex Exterior Design</h5>
+                                        <div class="star">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                        <h4>Check Price</h4>
+                                    </div>
+                                        <a href="#"><i class=" fal fa-shopping-cart cart"></i></a>
+                                    </div>
+
+                                    <div class="pro" onclick="window.location.href='eg8.html';">
+                                        <img src="50x70/8.jpg" alt="">
+                                        <div class="des">
+                                            <span>Homely Vision</span>
+                                            <h5>50X70 sqft Duplex Exterior Design</h5>
+                                            <div class="star">
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                            <h4>Check Price</h4>
+                                        </div>
+                                            <a href="#"><i class=" fal fa-shopping-cart cart"></i></a>
+                                        </div>
+        
+   
+        <div class="pro" onclick="window.location.href='eg9.html';" >
+            <img src="50x70/9.jpg" alt="">
+            <div class="des">
+                <span>Homely Vision</span>
+                <h5>50X70 sqft Duplex Exterior Design</h5>
+                <div class="star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <h4>Check Price</h4>
+            </div>
+                <a href="#"><i class=" fal fa-shopping-cart cart"></i></a>
+            </div>
+            <div class="pro" onclick="window.location.href='eg10.html';">
+                <img src="50x70/10.jpg" alt="">
+                <div class="des">
+                    <span>Homely Vision</span>
+                    <h5>50X70 sqft Duplex Exterior Design</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>Check Price</h4>
+                </div>
+                    <a href="#"><i class=" fal fa-shopping-cart cart"></i></a>
+                </div>
+
+                <div class="pro" onclick="window.location.href='eg11.html';">
+                    <img src="50x70/11.jpg" alt="">
+                    <div class="des">
+                        <span>Homely Vision</span>
+                        <h5>50X70 sqft Duplex Exterior Design</h5>
+                        <div class="star">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h4>Check Price</h4>
+                    </div>
+                        <a href="#"><i class=" fal fa-shopping-cart cart"></i></a>
+                    </div>
+
+                    <div class="pro" onclick="window.location.href='eg12.html';">
+                        <img src="50x70/12.jpg" alt="">
+                        <div class="des">
+                            <span>Homely Vision</span>
+                            <h5>50X70 sqft Duplex Exterior Design</h5>
+                            <div class="star">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <h4>Check Price</h4>
+                        </div>
+                            <a href="#"><i class=" fal fa-shopping-cart cart"></i></a>
+                        </div>
+
+                        <div class="pro" onclick="window.location.href='eg13.html';">
+                            <img src="50x70/13.jpg" alt="">
+                            <div class="des">
+                                <span>Homely Vision</span>
+                                <h5>50X70 sqft Duplex Exterior Design</h5>
+                                <div class="star">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <h4>Check Price</h4>
+                            </div>
+                                <a href="#"><i class=" fal fa-shopping-cart cart"></i></a>
+                            </div>
+
+                            <div class="pro" onclick="window.location.href='eg14.html';">
+                                <img src="50x70/14.jpg" alt="">
+                                <div class="des">
+                                    <span>Homely Vision</span>
+                                    <h5>50X70 sqft Duplex Exterior Design</h5>
+                                    <div class="star">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <h4>Check Price</h4>
+                                </div>
+                                    <a href="#"><i class=" fal fa-shopping-cart cart"></i></a>
+                                </div>
+
+                                <div class="pro" onclick="window.location.href='eg15.html';">
+                                    <img src="50x70/15.jpg" alt="">
+                                    <div class="des">
+                                        <span>Homely Vision</span>
+                                        <h5>50X70 sqft Duplex Exterior Design </h5>
+                                        <div class="star">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                        <h4>Check Price</h4>
+                                    </div>
+                                        <a href="#"><i class=" fal fa-shopping-cart cart"></i></a>
+                                    </div>
+
+                                    <div class="pro" onclick="window.location.href='eg16.html';">
+                                        <img src="50x70/16.jpg" alt="">
+                                        <div class="des">
+                                            <span>Homely Vision</span>
+                                            <h5>50X70 sqft Duplex Exterior Design</h5>
+                                            <div class="star">
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                            <h4>Check Price</h4>
+                                        </div>
+                                            <a href="#"><i class=" fal fa-shopping-cart cart"></i></a>
+                                        </div>
+        </div>
+    </div>
+    
+</section>
+    </div>
+</div>
+
+
+
+
+   <section id="newsletter" class="section-p1 section-m1">
+    <div class="newstext">
+        <h4>Sign Up For New Design Update</h4>
+        <p>Get E-mail updates about our latest shop and <span>special offers.</span></p>
+    </div>
+    <div class="form">
+        <input type="text" placeholder="Your email addres">
+        <button class="normal">Sign up</button>
+    </div>
+</section>
+
+<footer class="section-p1">
+
+    <div class="col">
+        <img class="logo" src="image/newlogo.png" alt="">
+        <h4>Contact</h4>
+        <p><strong> Address:</strong> 562 Wellington, Road,Steet 32, San francisco</p>
+        <p><strong> Phone:</strong> +01 2222 365 6789</p>
+        <p><strong> Hours:</strong> 10:00-18:00, Mon - Sat</p>
+        <div class="follow">
+            <h4>Follow Us</h4>
+            <div class="icon">
+                <i class="fab fa-facebook"></i>
+                <i class="fab fa-twitter"></i>
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-pinterest-p"></i>
+                <i class="fab fa-youtube"></i>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col">
+        <h4>About</h4>
+        <a href="#">About Us</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms & Conditions</a>
+        <a href="#">Contact Us</a>
+    </div>
+    <div class="col">
+        <h4>My Account</h4>
+        <a href="#">Sign In</a>
+        <a href="#">View Cart</a>
+        <a href="#">My wishlist</a>
+        <a href="#">Track My Order</a>
+        <a href="#">Help</a>
+        
+    </div>
+
+    <div class="col install">
+        <h4>Install App</h4>
+        <p>From App Store o Google Play</p>
+        <div class="row">
+            <img src="image/pay/app.jpg" alt="">
+            <img src="image/pay/play.jpg" alt="">
+        </div>
+        <p>Secured Payment Gateways</p>
+        <img src="image/pay/pay.png" alt="">
+    </div>
+    <div class="copyright">
+        <p>@ 2023, Tech2 etc - HTML CSS Homely Visions</p>
+    </div>
+</footer>
+
+<!--this is for diamension-->
+<script>
+    function openHTMLFile() {
+    const length = document.getElementById("length").value;
+    const width = document.getElementById("width").value;
+
+    // Determine the HTML file to open based on the user's input
+    let fileName;
+
+    if (length === "" || width === "") {
+        alert("Please enter both length and width.");
+        return;
+    }
+
+    if (length === "10" && width === "20") {
+        fileName = "10x20.html" ;
+    } else if (length === "10" && width === "30") {
+        fileName = "10x30.html";
+    }  else if (length === "10" && width === "40") {
+        fileName = "10x40.html";
+    }  else if (length === "10" && width === "50") {
+        fileName = "10x50.html";
+    } 
+    else if (length === "10" && width === "60") {
+        fileName = "10x60.html";
+    } 
+    else if (length === "10" && width === "70") {
+        fileName = "10x70.html";
+    } 
+    else if (length === "10" && width === "80") {
+        fileName = "10x80.html";
+    } 
+    else if (length === "10" && width === "90") {
+        fileName = "10x90.html";
+    } 
+     else if (length === "10" && width === "100") {
+        fileName = "10x100.html";
+    } 
+    else if (length === "20" && width === "10") {
+        fileName = "20x10.html";
+    } 
+    else if (length === "20" && width === "20") {
+        fileName = "20x20.html";
+    } 
+    else if (length === "20" && width === "30") {
+        fileName = "20x30.html";
+    } 
+    else if (length === "20" && width === "40") {
+        fileName = "20x40.html";
+    } 
+    else if (length === "20" && width === "50") {
+        fileName = "20x50.html";
+    } 
+    else if (length === "20" && width === "60") {
+        fileName = "20x60.html";
+    } 
+    else if (length === "20" && width === "70") {
+        fileName = "20x70.html";
+    } 
+    else if (length === "20" && width === "80") {
+        fileName = "20x80.html";
+    } 
+    else if (length === "20" && width === "90") {
+        fileName = "20x90.html";
+    } 
+    else if (length === "20" && width === "100") {
+        fileName = "20x100.html";
+    } 
+    else if (length === "30" && width === "10") {
+        fileName = "30x10.html";
+    } 
+    else if (length === "30" && width === "20") {
+        fileName = "30x20.html";
+    } 
+    else if (length === "30" && width === "30") {
+        fileName = "30x30.html";
+    } 
+    else if (length === "30" && width === "40") {
+        fileName = "30x40.html";
+    } 
+    else if (length === "30" && width === "50") {
+        fileName = "30x50.html";
+    } 
+    else if (length === "30" && width === "60") {
+        fileName = "30x60.html";
+    } 
+    else if (length === "30" && width === "70") {
+        fileName = "30x70.html";
+    } 
+    else if (length === "30" && width === "80") {
+        fileName = "30x80.html";
+    } 
+    else if (length === "30" && width === "90") {
+        fileName = "30x90.html";
+    } 
+    else if (length === "30" && width === "100") {
+        fileName = "30x100.html";
+    } 
+    else if (length === "40" && width === "10") {
+        fileName = "40x10.html";
+    } 
+    else if (length === "40" && width === "20") {
+        fileName = "40x20.html";
+    } 
+    else if (length === "40" && width === "30") {
+        fileName = "40x30.html";
+    } 
+    else if (length === "40" && width === "40") {
+        fileName = "40x40.html";
+    } else if (length === "40" && width === "50") {
+        fileName = "40x50.html";
+    } 
+    else if (length === "40" && width === "60") {
+        fileName = "40x60.html";
+    } 
+    else if (length === "40" && width === "70") {
+        fileName = "40x70.html";
+    } 
+    else if (length === "40" && width === "80") {
+        fileName = "40x80.html";
+    } 
+    else if (length === "40" && width === "90") {
+        fileName = "40x90.html";
+    } 
+    else if (length === "40" && width === "100") {
+        fileName = "40x100.html";
+    } 
+   
+    else if (length === "50" && width === "10") {
+        fileName = "50x10.html";
+    } 
+    else if (length === "50" && width === "20") {
+        fileName = "50x20.html";
+    } 
+    else if (length === "50" && width === "30") {
+        fileName = "50x30.html";
+    } 
+    else if (length === "50" && width === "40") {
+        fileName = "50x40.html";
+    } else if (length === "50" && width === "50") {
+        fileName = "50x50.html";
+    } 
+    else if (length === "50" && width === "60") {
+        fileName = "50x60.html";
+    } 
+    else if (length === "50" && width === "70") {
+        fileName = "50x70.html";
+    } 
+    else if (length === "50" && width === "80") {
+        fileName = "50x80.html";
+    } 
+    else if (length === "50" && width === "90") {
+        fileName = "50x90.html";
+    } 
+    else if (length === "50" && width === "100") {
+        fileName = "50x100.html";
+    } 
+      
+     
+    else if (length === "60" && width === "10") {
+        fileName = "60x10.html";
+    } 
+    else if (length === "60" && width === "20") {
+        fileName = "60x20.html";
+    } 
+    else if (length === "60" && width === "30") {
+        fileName = "60x30.html";
+    } 
+    else if (length === "60" && width === "40") {
+        fileName = "60x40.html";
+    } else if (length === "60" && width === "50") {
+        fileName = "60x50.html";
+    } 
+    else if (length === "60" && width === "60") {
+        fileName = "60x60.html";
+    } 
+    else if (length === "60" && width === "70") {
+        fileName = "60x70.html";
+    } 
+    else if (length === "60" && width === "80") {
+        fileName = "60x80.html";
+    } 
+    else if (length === "60" && width === "90") {
+        fileName = "60x90.html";
+    } 
+    else if (length === "60" && width === "100") {
+        fileName = "60x100.html";
+    } 
+
+    else if (length === "70" && width === "10") {
+        fileName = "70x10.html";
+    } 
+    else if (length === "70" && width === "20") {
+        fileName = "70x20.html";
+    } 
+    else if (length === "70" && width === "30") {
+        fileName = "70x30.html";
+    } 
+    else if (length === "70" && width === "40") {
+        fileName = "70x40.html";
+    } else if (length === "70" && width === "50") {
+        fileName = "70x50.html";
+    } 
+    else if (length === "70" && width === "60") {
+        fileName = "70x60.html";
+    } 
+    else if (length === "70" && width === "70") {
+        fileName = "70x70.html";
+    } 
+    else if (length === "70" && width === "80") {
+        fileName = "70x80.html";
+    } 
+    else if (length === "70" && width === "90") {
+        fileName = "70x90.html";
+    } 
+    else if (length === "70" && width === "100") {
+        fileName = "70x100.html";
+    } 
+
+    else if (length === "80" && width === "10") {
+        fileName = "80x10.html";
+    } 
+    else if (length === "80" && width === "20") {
+        fileName = "80x20.html";
+    } 
+    else if (length === "80" && width === "30") {
+        fileName = "80x30.html";
+    } 
+    else if (length === "80" && width === "40") {
+        fileName = "80x40.html";
+    } else if (length === "80" && width === "50") {
+        fileName = "80x50.html";
+    } 
+    else if (length === "80" && width === "60") {
+        fileName = "80x60.html";
+    } 
+    else if (length === "80" && width === "70") {
+        fileName = "80x70.html";
+    } 
+    else if (length === "80" && width === "80") {
+        fileName = "80x80.html";
+    } 
+    else if (length === "80" && width === "90") {
+        fileName = "80x90.html";
+    } 
+    else if (length === "80" && width === "100") {
+        fileName = "80x100.html";
+    } 
+
+    else if (length === "90" && width === "10") {
+        fileName = "90x10.html";
+    } 
+    else if (length === "90" && width === "20") {
+        fileName = "90x20.html";
+    } 
+    else if (length === "90" && width === "30") {
+        fileName = "90x30.html";
+    } 
+    else if (length === "90" && width === "40") {
+        fileName = "90x40.html";
+    } else if (length === "90" && width === "50") {
+        fileName = "90x50.html";
+    } 
+    else if (length === "90" && width === "60") {
+        fileName = "90x60.html";
+    } 
+    else if (length === "90" && width === "70") {
+        fileName = "90x70.html";
+    } 
+    else if (length === "90" && width === "80") {
+        fileName = "90x80.html";
+    } 
+    else if (length === "90" && width === "90") {
+        fileName = "90x90.html";
+    } 
+    else if (length === "90" && width === "100") {
+        fileName = "90x100.html";
+    } 
+
+    else if (length === "100" && width === "10") {
+        fileName = "100x10.html";
+    } 
+    else if (length === "100" && width === "20") {
+        fileName = "100x20.html";
+    } 
+    else if (length === "100" && width === "30") {
+        fileName = "100x30.html";
+    } 
+    else if (length === "100" && width === "40") {
+        fileName = "100x40.html";
+    } else if (length === "100" && width === "50") {
+        fileName = "100x50.html";
+    } 
+    else if (length === "100" && width === "60") {
+        fileName = "100x60.html";
+    } 
+    else if (length === "100" && width === "70") {
+        fileName = "100x70.html";
+    } 
+    else if (length === "100" && width === "80") {
+        fileName = "100x80.html";
+    } 
+    else if (length === "100" && width === "90") {
+        fileName = "100x90.html";
+    } 
+    else if (length === "100" && width === "100") {
+        fileName = "100x100.html";
+    } 
+
+    else {
+        alert("No matching HTML file found for the provided dimensions.");
+        return;
+    }
+
+    // Open the specified HTML file in a new tab or window
+    window.open(fileName, '_blank');
+}
+
+</script>
+<!--this is for flore counting-->
+<script>
+    function loadHTMLFile() {
+    const fileName = document.getElementById("fileName").value;
+    
+    // Open the specified HTML file in a new tab or window
+    window.open(fileName + ".html", '_blank');
+}
+
+</script>
+<!--this is for range search-->
+<script>
+    function checkboxClicked(checkbox) {
+        if (checkbox.checked) {
+            var pageName = checkbox.getAttribute("data-page");
+            if (pageName) {
+                window.location.href = pageName + '.html';
+            }
+        }
+    }
+</script>
+
+   <script src="script.js"></script> 
+</body>
+</html>
